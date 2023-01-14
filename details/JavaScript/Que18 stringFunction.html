@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function operation(){ 
+            var main=""+document.getElementById("str").value;
+            var sub=document.getElementById("sub").value;
+            var rep=document.getElementById("replace").value;
+            var str=document.getElementsByName("op");
+            
+            
+            for(ob of str){
+                if(ob.checked){
+                    var opt=ob.value;
+                }
+            }
+
+            switch(opt){
+                case "search":
+                    if(main.includes(sub)){
+                        document.getElementById("mydiv").innerHTML="substring is present "
+                    }else{
+                        document.getElementById("mydiv").innerHTML="substring is not present "
+                    }
+                    break;
+
+                case "up":              
+                     document.getElementById("mydiv").innerHTML=main.toUpperCase();
+                break;
+
+                case "low":
+                    document.getElementById("mydiv").innerHTML=main.toLowerCase();
+                    break;
+
+                case "trim":
+                document.getElementById("mydiv").innerHTML=main.trim();
+                break;
+
+                case "concat":
+                     document.getElementById("mydiv").innerHTML=main.concat(sub);
+                     break;
+
+                case "replace":                   
+                    document.getElementById("mydiv").innerHTML=main.replace(sub,rep);
+                    break;
+                    
+            }
+        }
+    </script>
+</head>
+<body>
+    Enter String: <input type="text" name="string" id="str"> <br><br>
+    Enter Sub String: <input type="text" name="sub" id="sub">  <br><br>
+    Replace with String: <input type="text" name="repl" id="replace"> <br><br>
+
+    <input type="radio" name="op" id="search" value="search">Search sub string in main string &nbsp;&nbsp;
+    <input type="radio" name="op" id="upper" value="up">To Uppercase &nbsp;&nbsp;
+    <input type="radio" name="op" id="lower" value="low">To Lowercase &nbsp;&nbsp;
+    <input type="radio" name="op" id="trim" value="trim">Trim spaces &nbsp;&nbsp;
+    <input type="radio" name="op" id="concat" value="concat">Concatenate &nbsp;&nbsp;
+    <input type="radio" name="op" id="replace" value="replace">Replace &nbsp;&nbsp; <br>
+
+    <button type="button" name="btn" id="btn" onclick="operation()">Submit Query</button>
+
+    <div id="mydiv">
+
+    </div>
+</body>
+</html>

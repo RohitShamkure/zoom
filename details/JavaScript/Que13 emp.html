@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function disp(){
+        var ob=[{empid:12,ename:"rajesh",salary:5000},{empid:14,ename:"vishal",salary:12000},
+        {empid:10,ename:"rupali",salary:8000},{empid:14,ename:"kajal",salary:6000}]
+
+        str=`<table border="2px"><tr><th>Emp Id</th><th>Name</th><th>Salary</th></tr>`
+
+        for(let i=0;i<ob.length;i++){
+            str+=`<tr><td>${ob[i].empid}</td><td>${ob[i].ename}</td><td>${ob[i].salary}</td></tr>`
+        }
+        str+="</table>"
+
+        document.getElementById("myclass").innerHTML=str;
+
+        }
+
+    </script>
+
+</head>
+<body onload="disp()">
+    <div id="myclass">
+
+    </div>
+</body>
+</html>

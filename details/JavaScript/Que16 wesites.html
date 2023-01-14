@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function search(){
+            var str=(document.getElementById("site").value).split(",");
+
+            var arr=str.filter(x=>x.includes("www"));
+
+            document.getElementById("mydiv").innerHTML=arr+" <br> sites found:"+arr.length;
+            
+            
+        }
+    </script>
+</head>
+<body>
+    <textarea name="site" id="site" cols="30" rows="5"></textarea>
+    <button type="button" name="search" id="search" onclick="search()">Search</button>
+    <div id="mydiv">
+
+    </div>
+</body>
+</html>

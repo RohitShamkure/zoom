@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function disp(){
+            var n=parseInt(document.getElementById("num").value);
+            for(var i=1;i<=10;i++){
+                document.getElementById("div").innerHTML+=`${n} * ${i} = ${n*i} <br> `;
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <input type="number" name="num" id="num">Number: <br>
+    <button name="disp" id="disp" onclick="disp()">Table</button>
+    <div id="div" style="border: 4px solid red;width: 90px;" >
+
+    </div>
+</body>
+</html>

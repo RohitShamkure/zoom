@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function sorted(){
+        //     var arr=[15,24,26,14,25,26,45,98,100,5];
+        //     for(var i=0;i<arr.length;i++){
+        //         for(var j=i+1;j<arr.length;j++){
+        //             if(arr[i]>arr[j]){
+        //                 temp=arr[i];
+        //                 arr[i]=arr[j];
+        //                 arr[j]=temp;
+        //             }
+        //         }
+        //     }
+
+        //     document.write(arr);
+            
+        // }
+     
+      
+         function reverse(){
+            // var str=["vishal","rupesh","suraj"]
+            var arr=document.getElementsByName("nm");
+            //  var arg=[];
+            // arg.push=str[0].value;
+
+            var str=[];
+            for(ob of arr){
+                str.push(ob.value);
+            }
+            // for(var k=1;k<=5;k++){
+            // str.push(document.getElementById(`nm${k}`).value);
+            // }
+            
+            
+           for(var j=0;j<str.length;j++){
+                let arr="";
+                 for(var i=str[j].length-1;i>=0;i--){
+                     arr +=str[j].charAt(i);
+                }
+                str[j]=arr;
+         }
+
+         str.sort();
+         document.write(str);
+         
+         
+         }
+     </script>
+</head>
+<body >
+    <input type="text" name="nm" id="nm1"><br>
+    <input type="text" name="nm" id="nm2"><br>
+    <input type="text" name="nm" id="nm3"><br>
+    <input type="text" name="nm" id="nm4"><br>
+    <input type="text" name="nm" id="nm5">
+
+    <button type="button" id="btn" onclick="reverse()">reverse</button>
+   
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr,td{
+            border:2px solid grey;
+            
+
+            
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Employee Details</h2>
+
+
+    
+    <div align="center">
+    <table style="border: 3px solid grey;  height: 25rem;width: 25rem;border-collapse: collapse;" cellpadding="10px" >
+        <tr>
+            <td>1)</td>
+            <td><label for="empid">Employee ID:</label></td>
+            <td><input type="text" name="name" id="empid" ></td>
+        </tr>
+        <tr>
+            <td>2)</td>
+            <td><label for="nm">Employee Name:</label></td>
+            <td><input type="text" name="name" id="nm" maxlength="24"></td>
+        </tr>
+
+        <tr>
+            <td>3)</td>
+            <td><label for="dept">Department Name:</label></td>
+            <td>
+                <select name="dept" id="dept">
+                    <option value="S/W">S/W</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>4)</td>
+            <td>Gender:</td>
+            <td>
+                <input type="radio" name="gender" id="m"><label for="m">Male</label>&nbsp;&nbsp;
+                <input type="radio" name="gender" id="f"><label for="f">Female</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td>5)</td>
+            <td><label for="address">Address:</label></td>
+            <td><textarea name="address" id="address" cols="40" rows="5"></textarea></td>
+        </tr>
+
+        <tr>
+            <td>6)</td>
+            <td>Skill Topic:</td>
+            <td>
+                <input type="checkbox" name="sk" id="C"><label for="C">C</label>
+                <input type="checkbox" name="sk" id="C++"><label for="C++">C++</label>
+                <input type="checkbox" name="sk" id="java"><label for="java">Java</label>
+                <input type="checkbox" name="sk" id=".net"><label for=".net">.Net</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td>7)</td>
+            <td><label for="email">Email:</label></td>
+            <td><input type="email" name="email" id="email" required></td>
+        </tr>
+
+        <tr>
+            <td>8)</td>
+            <td><label for="dob">Birth Date:</label></td>
+            <td><input type="date" name="dob" id="dob"></td>
+        </tr>
+
+    </table>
+
+</div>
+
+</body>
+</html>

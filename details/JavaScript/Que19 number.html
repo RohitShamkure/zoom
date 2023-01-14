@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate(){
+            var n=parseInt(document.getElementById("num").value)
+            if(n<0){
+                document.getElementById("mydiv").innerHTML="Number is out of range";
+            }else if(n>=0 && n<1000){
+                sum=0;
+                while(n>0){
+                    let r=n%10;
+                    sum=sum+r;
+                    n=parseInt(n/10);
+                }
+
+                document.getElementById("mydiv").innerHTML="Sum of digit is: "+sum;
+
+            }else{
+                document.getElementById("mydiv").innerHTML="Number is out of range";
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="number" name="num" id="num"><br>
+    <button type="button" name="btn" id="btn" onclick="validate()">Validate</button>
+    <div id="mydiv">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            background-color: black;
+            border-color: blanchedalmond;
+            border-radius: 2px;
+        }
+
+        .f1{
+            width: 50%;
+            border:5px solid blue;
+            border-radius: 30px;
+        }
+
+        .f2{
+            width: 25%;
+            border:5px solid blue;
+            border-radius: 20px;
+        }
+
+        .first{
+            text-align: right;
+            width: 150px;
+        }
+        tr{
+            height: 40px;
+            
+        }
+    </style>
+</head>
+<body style="background-color: black;color: blanchedalmond;font-size: large;height: 200px;">
+    
+
+
+    <form action="">
+        <fieldset class="f1">
+            <legend style="background-color: blue">Name and address</legend>
+
+            <table >
+                <tr>
+                <td class="first"><label for="ssn">SSN:</label></td>
+                <td><input type="text" name="ssn" id="ssn" autofocus></td>
+                </tr>
+
+                 <tr>
+                    <td class="first"><label for="nm">Full Name:</label></td>
+                    <td><input type="text" name="name" id="nm"></td>
+                 </tr>
+
+                 <tr>
+                     <td class="first"><label for="addr">Street and number:</label></td>
+                     <td><input type="text" name="addr" id="addr"></td>
+                 </tr>
+
+                 <tr>
+                    <td class="first"><label for="pincode">Postal Code:</label></td>
+                    <td><input type="number" name="pincode" id="pincode"></td>
+                 </tr>
+
+                 <tr>
+                     <td class="first"><label for="city">City</label></td>
+                     <td><input type="text" name="city" id="city"></td>
+                 </tr>
+                
+            </table>
+            
+        </fieldset>
+
+        <br><br>
+
+        <fieldset class="f2" >
+            <legend style="background-color: blue">Username and Password</legend>
+            <table >
+                <tr>
+                <td class="first"><label for="usrnm">Username:</label></td>
+                <td><input type="text" name="usrnm" id="usrnm" autofocus></td>
+                </tr>
+
+                 <tr>
+                    <td class="first"><label for="pass">Password</label></td>
+                    <td><input type="password" name="pass" id="pass"></td>
+                 </tr>
+
+                 <tr>
+                     <td class="first">
+                        <button name="btn" id="btn" style="background-color: blue;color: aliceblue;">Register</button> 
+                     </td>
+                 </tr>
+            </table>
+            
+        </fieldset>
+
+
+
+
+
+
+
+
+
+
+    </form>
+    
+
+
+</body>
+</html>

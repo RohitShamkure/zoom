@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+       function sort(){
+            var arr=[];
+            for(var j=1;j<=6;j++){
+                arr.push(document.getElementById(`${j}`).value);
+            }
+            // arr=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+
+            arr.sort();
+            
+
+
+            for(var i=0;i<arr.length;i++){
+                document.getElementById("mydiv").innerHTML+=arr[i]+"  ";
+            }
+            
+        }
+
+    </script>
+</head>
+<body>
+    Give Name of Employees <br>
+
+    <div><input type="text" name="emp" id="1"></div>
+   <div> <input type="text" name="emp" id="2"></div>
+   <div> <input type="text" name="emp" id="3"></div>
+    <div><input type="text" name="emp" id="4"></div>
+   <div> <input type="text" name="emp" id="5"></div>
+    <div><input type="text" name="emp" id="6"></div>
+
+    <button name="btn" id="btn" onclick="sort()">Sorted name</button>
+
+    <div id="mydiv"></div>
+    
+</body>
+</html>

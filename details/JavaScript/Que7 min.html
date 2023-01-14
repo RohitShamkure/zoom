@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   
+</head>
+<body>
+    <script>
+
+        var arr=[15,26,13,5,14,9,32,2]
+
+        function min(){
+            var min=0;
+            for(var i=0;i<arr.length;i++){
+                if(arr[i]>arr[i+1]){
+                    min=arr[i+1];
+                }
+            }
+
+            document.getElementById("mydiv").innerHTML="minimum is :"+min;
+            
+        }
+    </script>
+
+    arr=[15,26,13,5,14,9,32,2] <br>
+    <button id="btn" onclick="min()"> min</button>
+    <div id="mydiv">
+
+    </div>
+    
+</body>
+</html>

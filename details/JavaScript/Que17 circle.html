@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function disp(){
+            var r=parseInt(document.getElementById("num").value);
+
+            var area=Math.PI*r*r;
+            var circum=2*Math.PI*r;
+            document.getElementById("area").innerHTML+=area.toFixed(2);
+            document.getElementById("circumference").innerHTML+=circum.toFixed(2);
+
+        }
+    </script>
+</head>
+<body>
+    Enter Radius:&nbsp;&nbsp;
+    <input type="number" name="num" id="num" autofocus>
+    <button type="button" name="btn" id="btn" onclick="disp()">display</button>
+    <div id="area">Area is: </div>
+    <div id="circumference">Circumference is: </div>
+</body>
+</html>

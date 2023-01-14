@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function pow(){
+            var m=parseInt(document.getElementById("num").value);
+            var n=parseInt(document.getElementById("to").value);
+
+            var sum=1
+            for(var i=0;i<n;i++){
+                sum=sum*m;
+            }
+
+            document.getElementById("mydiv").innerHTML="Ans is : "+sum;
+        }
+    </script>
+
+
+
+
+</head>
+<body>
+    <input type="number" name="num" id="num">&nbsp;&nbsp; raises to &nbsp;&nbsp;
+    <input type="number" name="raise" id="to" onblur="pow()">
+
+    <div id="mydiv">
+
+    </div>
+
+
+
+</body>
+</html>

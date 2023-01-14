@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function calculator(){
+            n1=parseInt(document.getElementById("num1").value);
+            n2=parseInt(document.getElementById("num2").value);
+            var arr=document.getElementsByName("cal");
+            var res;
+
+            for(var i=0;i<arr.length;i++){
+                if(arr[i].checked){
+                    var op=arr[i].value;
+                }
+            }
+
+            switch(op){
+                case "+":
+                res=n1+n2;
+                break;
+                case "-":
+                res=n1-n2;
+                break;
+                case "*":
+                res=n1*n2;
+                break;
+                case "/":
+                res=n1/n2;
+                break;
+            }
+
+            document.getElementById("result").setAttribute("value",res);
+
+
+        }
+    </script>
+</head>
+<body>
+
+    <input type="number" name="num1" id="num1"> First Number <br>
+    <input type="number" name="num2" id="num2"> Second Number <br>
+    <input type="text" name="result" id="result" >
+
+    <input type="radio" name="cal" id="add" value="+">Add &nbsp;&nbsp;
+    <input type="radio" name="cal" id="sub" value="-">Sub&nbsp;&nbsp;
+    <input type="radio" name="cal" id="mul" value="*">MUl &nbsp;&nbsp;
+    <input type="radio" name="cal" id="div" value="/">Div&nbsp;&nbsp;
+
+    <button type="button" name="calculator" id="calci" onclick="calculator()"> Calculate</button>
+    
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 2px solid rgb(71, 186, 231);
+           
+            font-size: large;
+            padding: 7px;
+        }
+
+        .error{
+            color: red;
+            font-size: medium;
+        }
+    </style>
+    
+    <script>
+        function validateName(){
+            var nm=""+document.getElementById("nm").value;
+            var reg=/.*[a-z]/i;
+            if(nm.match(reg)){
+                return true;
+            }else{
+                alert("false");
+                document.getElementById("errname").innerHTML="error";
+            }
+        }
+    </script>
+
+
+
+</head>
+<body>
+
+    <form action="" >
+
+        <table >
+            <tr>
+                <td><label for="name">Name:</label></td>
+                <td><input type="text" name="nm" id="nm" required></td>
+                <td class="error" id="errname"></td>
+            </tr>
+
+            <tr>
+                <td>Birth Date:</td>
+                <td><input type="date" name="date" id="date" ></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td><label for="email">Email Address:</label></td>
+                <td><input type="text" name="email" id="email" ></td>
+                <td class="error" id="erremail"></td>
+            </tr>
+
+            <tr>
+                <td>Gender</td>
+                <td><input type="radio" name="gender" id="m" value="Male"><label for="m">Male</label><br>
+                <input type="radio" name="gender" id="f" value="Female"><label for="f">Female</label></td>
+            </tr>
+
+            <tr>
+                <td><label for="luckyno">Lucky number</label></td>
+                <td><input type="number" name="number" id="luckyno" ></td>
+                <td class="error" id="errno"></td>
+            </tr>
+
+            <tr>
+                <td>Favorite Foods:</td>
+                <td>
+                    <input type="checkbox" name="food" id="pizza" value="Pizza"><label for="pizza">Pizza</label> <br>
+                    <input type="checkbox" name="food" id="pasta" value="Pasta"><label for="pasta">Pasta</label> <br>
+                    <input type="checkbox" name="food" id="chinese" value="Chinese"><label for="chinese">Chinese</label> 
+
+                </td>
+            </tr>
+
+            <tr>
+                <td><button type="button" name="btn" id="btn" onclick="validateName()">Send Data</button></td>
+            </tr>
+        </table>
+
+    </form>
+
+
+</body>
+</html>

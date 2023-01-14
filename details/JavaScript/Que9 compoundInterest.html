@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculate(){
+            var p=parseInt(document.getElementById("amt").value)
+            var r=parseInt(document.getElementById("rate").value)
+            var n=parseInt(document.getElementById("year").value)
+            var sum=1;
+            for(var i=0;i<n;i++){
+                sum= sum*(1+(r/100))
+            }
+
+            var CI=(p*sum)-p;
+
+            document.getElementById("ci").value=CI;
+        }   
+    </script>
+</head>
+<body>
+    <div>
+        ------------------------------------------------------------------------- <br>
+        ********Calculate Compound Interest **************** <br>
+        -------------------------------------------------------------------------
+    </div>
+
+    <div>
+        <table>
+            <tr>
+                <td><label for="amt">Principal:</label></td>
+                <td><input type="number" name="amt" id="amt" ></td>
+            </tr>
+
+            <tr>
+                <td><label for="rate">Rate of Interest:</label></td>
+                <td><input type="number" name="rate" id="rate">&nbsp; %</td>
+            </tr>
+
+            <tr>
+                <td><label for="year">Period:</label></td>
+                <td><input type="number" name="year" id="year">&nbsp; yr</td>
+            </tr>
+
+            <tr>
+                <td>Comp Interest:</td>
+                <td><input type="text" name="ci" id="ci"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><button name="button" id="btn" onclick="calculate()">Calculate</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

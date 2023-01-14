@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error{
+            color: red;
+        }
+    </style>
+    <script>
+        function validatename(){
+            var nm=""+document.getElementById("nm").value;
+            if(nm.trim().length>=6){
+                document.getElementById("errname").innerHTML="";
+                return true;
+            }else{
+                document.getElementById("errname").innerHTML="*Cust name cannot be <6 character";
+                document.getElementById("nm").value="";
+                return false;
+            }
+
+        }
+
+        function validatebilldate(){
+            var bil=document.getElementById("bil").value;
+            var ship=document.getElementById("shipping").value;
+            if(bil<ship){
+                document.getElementById("errbil").innerHTML="";   
+                return true;
+            }else{
+               
+                document.getElementById("errbil").innerHTML="*Billing date cannot be greater than shipping date";
+                // document.getElementById("bil").value=null;
+                return false;
+            }
+        }
+
+        function display(){
+            var id=document.getElementById("num").value;
+            var nm=document.getElementById("nm").value;
+            var bil=document.getElementById("bil").value;
+            var ship=document.getElementById("shipping").value;
+            var order=document.getElementById("total").value;
+
+            document.getElementById("mydiv").innerHTML+="Order Id:"+id+"<br>";
+            document.getElementById("mydiv").innerHTML+="Cust Name:"+nm+"<br>";
+            document.getElementById("mydiv").innerHTML+="Billing Date:"+bil+"<br>";
+            document.getElementById("mydiv").innerHTML+="Shipping Date:"+ship+"<br>";
+            document.getElementById("mydiv").innerHTML+="Order Total:$"+order+"<br><br>"
+        }
+
+        function validate(){
+            validatename();
+            validatebilldate();
+            if(validatebilldate()===true && validatename()===true){
+                display();
+                document.getElementById("myform").reset();
+                
+                return true;
+            }else{
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="" id="myform" >
+
+        <table style="border: 2px solid rgb(107, 107, 202);padding: 3px;">
+            <tr>
+                <td><label for="id">Order ID:</label></td>
+                <td><input type="number" name="num" id="num" min="1" required></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label for="name">Cust name:</label></td>
+                <td><input type="text" name="nm" id="nm" required></td>
+                <td class="error" id="errname"></td>
+            </tr>
+
+            <tr>
+                <td><label for="bil">Enter Billing date:</label></td>
+                <td><input type="date" name="bil" id="bil" required></td>
+                <td class="error" id="errbil"></td>
+            </tr>
+            <tr>
+                <td><label for="shipping">Enter Shipping date:</label></td>
+                <td><input type="date" name="ship" id="shipping" required></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Order total:</td>
+                <td><input type="number" name="total" id="total" min="0" required></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><button type="submit" name="btn" id="btn" onclick="validate()">display</button></td>
+            </tr>
+
+        </table>
+    </form>
+
+    <div id="mydiv"></div>
+</body>
+</html>

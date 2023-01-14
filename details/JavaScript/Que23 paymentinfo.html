@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function compute(){
+            var amount=parseInt(document.getElementById("amt").value);
+            var rate=parseInt(document.getElementById("rate").value);
+            var period=parseInt(document.getElementById("year").value);
+            var totalInterest=(amount*rate*period)/100;
+            var totalPayment=amount+totalInterest;
+            var monthly=totalPayment/(12*period);
+
+            document.getElementById("payment").value=monthly.toFixed(2);
+            document.getElementById("total").value=totalPayment;
+            document.getElementById("interest").value=totalInterest;
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <th>Enter Loan Information:</th>
+        <tr>
+            <td>1)Amount of the loan (any currency):</td>
+            <td><input type="number" name="amt" id="amt" min="0" max="1500000" autofocus></td>
+        </tr>
+        <tr>
+            <td>2)Annual percentage rate of interest:</td>
+            <td><input type="number" name="rate" id="rate">&nbsp;%</td>
+        </tr>
+        <tr>
+            <td>3)Repayment period in years:</td>
+            <td><input type="number" name="year" id="year" min="7" max="15">&nbsp;yrs</td>
+        </tr>
+        <tr>
+            <td><button type="button" name="btn" id="btn" onclick="compute()">Compute</button></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Payment Information:</th>
+        </tr>
+        <tr>
+            <td>4)Your Monthly payment will be:</td>
+            <td><input type="number" name="payment" id="payment"></td>
+        </tr>
+        <tr>
+            <td>5)Your total payment will be:</td>
+            <td><input type="number" name="total" id="total"></td>
+        </tr>
+        <tr>
+            <td>6)Your total interest payments will be:</td>
+            <td><input type="number" name="interest" id="interest"></td>
+        </tr>
+    </table>
+</body>
+</html>

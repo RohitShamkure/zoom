@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body  onload="disp()">
+    <script>
+        months=["January","February","March","April","May","June","July","August","September","October","November","December"]
+        week=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+        function disp(){
+        var dt=new Date();
+        var day=week[dt.getDay()];
+        var date=dt.getDate();
+        var month=months[dt.getMonth()];
+        var year=dt.getFullYear();
+        date2=new Date("2023-01-01");
+        diff=date2-dt;
+        days=parseInt(diff/(1000*3600*24));
+
+        document.getElementById("main").innerHTML+=`${day},${date} ${month} ${year} `;
+        document.getElementById("child").innerHTML+=days;
+
+        }
+
+
+    </script>
+    
+       <div style="display: flex;flex-direction: row;">
+    <div id="main">Today is </div>,Welcome,and Good Afternoon to You.</div> 
+    <div id="child"> Number of days left till end of year:&nbsp;</div>
+
+</body>
+</html>

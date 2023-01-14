@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div align="center">
+    <h1>Appointmeant Scheduler</h1>
+
+    <fieldset  style="width: 500px;text-align: left;" >
+        <legend>Personal Information</legend>
+
+        <div>
+            <div><label for="nm">Name</label></div>
+            <input type="text" name="name" id="nm">
+            </div>
+        
+        <div><br>
+            <div><label for="tel">Telephone Number</label></div>
+            <input type="tel" name="telephone" id="tel">
+        </div><br>
+        <div>
+            <div><label for="email">E-mail Address</label></div>
+            <input type="email" name="email" id="email">
+        </div><br>
+        <div>
+            <div><label for="dob">Date of Birth</label></div>
+            <input type="date" name="dob" id="dob">
+        </div><br>
+    </fieldset>
+
+    <fieldset style="width: 500px;text-align: left;">
+        <legend>Appointment Request</legend>
+        <div>
+            <div>What is the reason for your visit?</div>
+           <textarea name="reason" id="reson" cols="20" rows="1"></textarea>
+            </div>      
+        <div><br>
+
+         <div>
+            <div>Current pain level</div>
+            <input type="range" name="pain" id="pain">
+            </div>      
+        <div><br> 
+            
+        <div>
+            <div>Preferred date</div>
+            <input type="date" name="date" id="date" min="2022-12-03">
+            </div>      
+        <div><br>
+            
+        <div>
+            <div>Preferred Time</div>
+            <input type="time" name="time" id="time">
+            </div>      
+        <div><br>  
+    </fieldset><br>
+
+    <input type="submit" name="sub" id="sub" value="Submit">
+
+</div>
+
+
+</body>
+</html>

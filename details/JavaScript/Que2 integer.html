@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function print(){
+            var n=parseInt( document.getElementById("int").value);
+            var txt=document.getElementById("msg").value;
+            var p=document.getElementById("mydiv");
+
+            for(var i=0;i<n;i++){
+                // document.write(`${txt} <br> `);
+                p.innerHTML+=txt+"<br>";
+            }
+        }
+    </script>
+
+
+</head>
+<body>
+    
+    <input type="text" name="msg" id="msg">&nbsp;Message <br>
+    <input type="number" name="int" id="int"> &nbsp;Integer <br>
+    <button name="btn" id="btn" onclick="print()">Print</button>
+
+    <div id="mydiv">
+
+    </div>
+
+
+
+
+
+</body>
+</html>

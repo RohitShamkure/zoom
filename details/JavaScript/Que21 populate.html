@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jsquery.js"></script>
+    <script>
+        var str=["John","Steve","Ben","Damon","Ian"];
+        $(document).ready(function(){
+            alert("hi");
+            $('#21').click(function(){
+                var list='<ol type="1">';
+                    str.forEach(x=>{
+                        list+='<li>'+x+'</li>';
+                    })
+                list+='</ol>';
+
+                $('#mydiv').html(list);
+            })
+
+        })
+
+
+    </script>
+</head>
+<body>
+    <button type="button" name="btn" id="btn">list</button>
+    <h2 id="21">Members of My Groups are:</h2>
+
+    <div id="mydiv">
+
+    </div>
+
+    
+</body>
+</html>

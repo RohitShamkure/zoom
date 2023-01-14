@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="./images/desert.jpg" method="GET">
+
+        <table border="3px" style="background-color:pink;">
+            <tr>
+                <td><label for="name">Name </label></td>
+                <td><input type="text" name="name" id="name"></td>
+            </tr>
+
+            <tr>
+                <td><label for="code">Employee Code</label></td>
+                <td><input type="number" name="empid" id="code"></td>
+            </tr>
+
+            <tr>
+                <td><label for="dept">Department</label></td>
+                <td>
+                    <input type="radio" name="dept" id="dept">ADMIN <br>
+                    <input type="radio" name="dept" id="dept">HR <br>
+                    <input type="radio" name="dept" id="dept">TECHNICAL<br>
+                    <input type="radio" name="dept" id="dept">ACCOUNTS
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="doj">Date of Joining</label></td>
+                <td>
+                    <input type="date" name="doj" id="doj">
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="Address">Address</label></td>
+                <td>
+                    <textarea name="Address" id="Address" cols="30" rows="5"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="tpa">Training Programme attended</label></td>
+                <td>
+                    <input type="checkbox" name="tpa" id="tpa">HTML/DHTML <br>
+                    <input type="checkbox" name="tpa" id="tpa">JAVA <br>
+                    <input type="checkbox" name="tpa" id="tpa">CLIENT/SERVER<br>
+                    <input type="checkbox" name="tpa" id="tpa">.NET
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="need"></label>Training Programme need to be attended</td>
+                <td>
+                    <select name="tpa" id="need">
+                    <option value="1">------select any one------</option>
+                    <option value="JAVASCRIPT">JAVASCRIPT</option>
+                    <option value="JSTRUTS">JSTRUTS</option>
+                </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Send the Information at</td>
+                <td>
+                    <a href="mailto:dahaputep@gmail.com">dahaputep@gmail.com</a>
+                </td>
+            </tr>
+
+
+
+        </table>
+
+
+    </form>
+
+
+
+</body>
+</html>

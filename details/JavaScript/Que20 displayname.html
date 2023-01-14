@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display(){
+            var nam=document.getElementsByName("nm");
+            var str=[];
+            for(ob of nam){
+                str.push(ob.value);
+            }
+            var name=str.join(",");
+
+            document.getElementById("mydiv").innerHTML=name.toUpperCase();
+           
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="nm" id="nm1"> <br>
+    <input type="text" name="nm" id="nm2"> <br>
+    <input type="text" name="nm" id="nm3"> <br>
+    <input type="text" name="nm" id="nm4"> <br>
+    <input type="text" name="nm" id="nm5">
+    <button type="button" name="btn" id="btn" onclick="display()"> display</button>
+
+    <div id="mydiv">
+
+    </div>
+</body>
+</html>
